@@ -1,0 +1,186 @@
+<section >
+<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-all-1">
+		<div class="row pop-brands-border box-shadow-class">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<div class="earn-class">
+					<img src="img/write_review.png" class="user-earn enable-click" title="Review and Earn">
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<div class="earn-class">
+					<img src="img/pilot_cust.png" class="user-earn enable-click" title="Be a Pilot and Earn">
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<div class="earn-class">
+					<img src="img/survey.png" class="user-earn enable-click" title="Take Survey and Earn">
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<div class="earn-class">
+					<img src="img/blog_icon.png" class="user-earn enable-click" title="Write and Earn">
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<div class="earn-class">
+					<img src="img/profile_icon.png" class="user-earn enable-click" title="View your space" ng-click="goToMyPage()">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="row all-brands-class">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 colpop-brands-border box-shadow-class" ng-model="userBrandList">
+				<div class="row brand-list">
+					<div class="col-md-12 text-center-class padding-bottom-1">Popular Brands</div>
+					<div class="col-md-6" ng-repeat="brand in userBrandList track by $index">
+						<img src="{{brand.logo}}" class="brand-in-list padding-all-1 box-shadow-class enable-click">
+					</div>
+
+				</div>
+				<div class="row text-center-class padding-all-1">
+					<a  href="" class="btn btn-link" ng-click="navigateToBrowseBrands()">All Brands</a>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 offer-list">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-model="popOffersList">
+						<div ng-if="selectedTab ==$index" ng-repeat="offer in popOffersList track by $index">
+							<img src="{{offer.offerImage}}" class="width100percent box-shadow-class pop-logo enable-click"/>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">	
+						<ul class="nav nav-tabs box-shadow-class" ng-model="popOffersList">
+						  <li class="nav-item nav-item-class" ng-repeat="navitem in popOffersList track by $index">
+						    <a ng-class="{'nav-link active-class':$index == selectedTab,'nav-link' : $index != selectedTab}" href="#" ng-click="setSelectedBrand($index)">
+						    	<img src="{{navitem.logo}}" class="nav-logo" style="transition:'width 0.5s ease-in-out'" /> {{navitem.offerBrand}}
+						    </a>
+			  			  </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--<div class="col-lg-12">
+		<div class="col-md-12" ng-model="popOffersList">
+						<div ng-if="selectedTab ==$index" ng-repeat="offer in popOffersList track by $index" >
+							<img src="{{offer.offerImage}}" class="width100percent box-shadow-class pop-logo enable-click"/>
+						</div>
+					</div>-->
+		 <!--<jk-carousel
+        data="popOffersList"
+        item-template-url="'js/app/landing/view/item-template.html'"
+        max-width="800" 
+        max-height="500"
+        auto-slide="true"
+        auto-slide-time="2000" >
+        </jk-carousel>
+	</div>-->
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-top-1 padding-left-0" ng-model="recommendedBrands">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Recommended Brands</div>
+			<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 padding-top-1" ng-repeat="reco in recommendedBrands track by $index">
+				<div class="pop-brands-border box-shadow-class padding-all-1 reco-brand-tile on-hover-class">
+					<div>
+						<!--<span>{{reco.brandName}}</span>-->
+						<img src="{{reco.logo}}" class="reco-logo" />
+						<!--<p>{{reco.brandDescription}}</p>-->
+					</div>
+					<div class="text-center-class padding-top20">
+						<button class="btn btn-default">+ Listen</button>
+						<button class="btn btn-link smaller-font-class" ng-click="viewBrandDetails(reco)">View Brand</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-top-1 padding-left-0" ng-model="couponsList">
+		<div class="col-md-4 coupon-class padding-top-1 box-shadow-class enable-click" ng-repeat="coupon in couponsList track by $index" ng-if="coupon.showCoupon">
+			<img src="{{coupon.logo}}" class="coupon-logo" />
+			<span>{{coupon.offer}}</span>
+		</div>
+	</div>
+	<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 padding-top-1 padding-left-0" ng-model="trendsInMyBrand">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Trends in My Brands</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 padding-top-1" ng-repeat="trend in trendsInMyBrand track by $index">
+				<div class="panel panel-default border-none box-shadow-class enable-click"><!-- -->
+					<div class="panel-heading background-white">
+						{{trend.trendTitle}}
+					</div>
+					<div class="panel-body trend-tile-height">
+						<div class="row padding-top-3">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<div>{{trend.brandName}}</div>
+								<div style="width:20rem"><i class="fa fa-clock-o" aria-hidden="true"></i><span> {{trend.expiresOn}}</span></div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								<img src="{{trend.logo}}" class="trend-logo pull-right" />
+							</div>
+						</div>
+					</div>
+					<div>
+						<img src="img/mail-box.png" class="width100percent" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 padding-top-1 padding-left-0">
+		<div class="row">Top Reviews</div>
+		<div class="row set-height-reviews">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="row">
+					<div class="col-md-12 margin-class-1 reviews-section">
+						<div>
+							<img src="img/user_icon.png" class="user_stories_icon">
+							<p class="brandstory-class">
+								"The text aout the product goes here and there will be product desciption coming and the user who wrote the blog will come side and the text will come next to it and the user can choose to click on it to see all the descriptions for all the products in detail."
+								<a>Read More</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-class-1 reviews-section">
+						<img src="img/user_icon.png" class="user_stories_icon">
+							<p class="brandstory-class">
+							"The text aout the product goes here and there will be product desciption coming and the user who wrote the blog will come side and the text will come next to it and the user can choose to click on it to see all the descriptions for all the products in detail."
+							<a>Read More</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-class-1 reviews-section">
+						<img src="img/user_icon.png" class="user_stories_icon">
+							<p class="brandstory-class">
+							"The text aout the product goes here and there will be product desciption coming and the user who wrote the blog will come side and the text will come next to it and the user can choose to click on it to see all the descriptions for all the products in detail."
+							<a>Read More</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-class-1 reviews-section">
+						<img src="img/user_icon.png" class="user_stories_icon">
+							<p class="brandstory-class">
+							"The text aout the product goes here and there will be product desciption coming and the user who wrote the blog will come side and the text will come next to it and the user can choose to click on it to see all the descriptions for all the products in detail."
+							<a>Read More</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row text-center-class padding-all-1">
+			<a  href="" class="btn btn-link" ng-click="navigateToBrowseBrands()">All Reviews</a>
+		</div>
+	</div>
+</div>
+</section>

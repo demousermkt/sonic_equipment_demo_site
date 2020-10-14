@@ -1,0 +1,76 @@
+<!doctype html>
+<html ng-app="app">
+   
+   <head>
+     <link rel="stylesheet" type="text/css" href="js/vendor/jquery-ui-1.11.4/jquery-ui.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.8.3/select.min.css">
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
+          <link rel="stylesheet" type="text/css" href="css/style.css">  
+          <!--<link rel="stylesheet" type="text/css" href="js/vendor/angular-chart/dist/angular-chart.css">-->
+          <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+          <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+          <link rel="stylesheet" href="js/vendor/jk-carousel.min.css" />
+   </head>
+   
+   <body ng-controller="appCtrl">
+    <div>
+      <div class="row header-class" ng-click="switchPersona()" data-toggle="modal" data-target="#myModal">
+      </div>
+	  <div class="row">
+		<div class="col-md-3 pull-right top-header-font-class">
+			<span>Press |</span>
+			<span>Contact Us |</span>
+			<span>Corporate Information |</span>
+			<span>Login <img src="img/user_avatar.png" class="logo-class"></span>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-md-1">
+          <img src="img/Sonic_Logo.png" class="logo-class-brand">
+		</div>
+		<div class="col-md-11 header-below-class">
+		  <div class="header-text-class">Sonic</div>
+		  <div class="tag-line-class">Awesome Equipment</div>
+        </div> 
+	  </div>	  
+      <div ui-view="main" class="padding-all-10 padding-top-1">
+      
+      </div>
+    </div>
+      
+   </body>
+
+      <script src="js/vendor-static/jquery.min.js"></script>
+      <script src="js/vendor/jquery-ui-1.11.4/jquery-ui.js"></script>  
+    <!--  <script src="js/vendor/angular.js"></script>-->
+      <!--For Courousel start-->
+ <script data-require="angular.js@*" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="https://code.angularjs.org/1.5.0/angular-animate.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.0/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--For courosel end-->
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/angular-ui-router.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="js/vendor/ui-bootstrap-tpls-1.1.1.js"></script>
+      <!--<script src="js/vendor/angular-touch.js"></script>-->
+     <!--  <script src="js/vendor/ui-sortable/src/sortable.js"></script>
+      <script src="js/vendor/ui-touch-punch.js"></script>
+
+      <script src="js/vendor/ngDraggable.js"></script>
+      <script src="js/vendor/modernizr-custom.js"></script> -->
+      
+      
+    <!--   <script src="js/vendor/Chart/Chart.js"></script>  -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+     <!--  <script src="js/vendor/angular-chart/dist/angular-chart.js"></script> -->
+
+      <script src="js/vendor/jk-carousel.min.js"></script> 
+
+   <script src="js/app/landing/landing-index.js"></script> 
+   <script src="js/app/landing/controller/landingCtrl.js"></script>
+
+   <script src="js/app/app.js"></script>
+</html>
