@@ -1,6 +1,6 @@
-var landingModule = angular.module('dc.landing');
+var productsModule = angular.module('dc.products');
 
- landingModule.controller('landingCtrl',['$scope','$state', '$http','$rootScope','$interval',
+ productsModule.controller('productsCtrl',['$scope','$state', '$http','$rootScope','$interval',
     function($scope,$state,$http,$rootScope,$interval){
         $scope.userBrandList = [{brandName : "Brand1",
                                 description : "Brand 1",
@@ -234,7 +234,7 @@ var landingModule = angular.module('dc.landing');
 
     	$scope.navigateToBrowseBrands = function()
     	{
-    		$state.go('products');
+    		$state.go('brandOnBoard');
     	}
 
     	$scope.navigateToMyBrands = function()

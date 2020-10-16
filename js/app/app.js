@@ -1,5 +1,6 @@
 window.app = angular.module('app',[
     'dc.landing',
+	'dc.products',
     'ui.bootstrap',
     'ui.router'
     ])
@@ -36,6 +37,16 @@ window.app = angular.module('app',[
             'main@':{
                 templateUrl:'js/app/landing/view/landing.html',
                 controller :'landingCtrl'
+            }
+        }
+    })
+	    .state('products',{
+        url:'/products',
+        views:{
+
+            'main@':{
+                templateUrl:'js/app/products/view/products.html',
+                controller :'productsCtrl'
             }
         }
     })
