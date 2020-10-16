@@ -1,6 +1,7 @@
 window.app = angular.module('app',[
     'dc.landing',
 	'dc.products',
+	'dc.customers',
     'ui.bootstrap',
     'ui.router'
     ])
@@ -25,6 +26,16 @@ window.app = angular.module('app',[
         $("#myModal").css("z-index", "1500");*/
         $state.go('landing');
     }
+	
+	$scope.navigateToProducts = function()
+	{
+		$state.go('products');
+	}
+	
+	$scope.navigateToCustomers = function()
+	{
+		$state.go('customers');
+	}
 }])
 .config(['$stateProvider','$urlRouterProvider','$locationProvider',
             function($stateProvider,$urlRouterProvider,$locationProvider){
@@ -40,13 +51,23 @@ window.app = angular.module('app',[
             }
         }
     })
-	    .state('products',{
-        url:'/products',
+	.state('products',{
+		url:'/products',
+		views:{
+
+		'main@':{
+			templateUrl:'js/app/products/view/products.html',
+			controller :'productsCtrl'
+			}
+		}
+	})
+	.state('customers',{
+        url:'/customers',
         views:{
 
             'main@':{
-                templateUrl:'js/app/products/view/products.html',
-                controller :'productsCtrl'
+                templateUrl:'js/app/customers/view/customers.html',
+                controller :'customersCtrl'
             }
         }
     })

@@ -31,21 +31,26 @@ body{
 	/*padding: 1%;*/
 	width: 7rem;
     height: 5rem;
-	background-color: #33ccff;
+	background-color: #4382f0;
 }
 
 .header-class
 {
 	width :100vw;
 	height: 1rem;
-	background: linear-gradient(to right, #ffffff 0%, #33ccff 100%)
+	background: linear-gradient(to right, #ffffff 0%, #4382f0 100%)
 	/*background-color: #AA4444;*/
 	/*color: #ffffff;*/
 }
 
 .header-below-class
 {
-	background-color: #33ccff !important;
+	background-color: #4382f0 !important;
+}
+
+.menuBtnColClass
+{
+	color: #4382f0 !important;
 }
 
 .top-header-font-class
@@ -85,8 +90,40 @@ body{
 }
 .brand-in-list
 {
-	height:10rem;
-	width: 15rem;
+	height:4rem;
+	width: 4rem;
+}
+.ctaBtnclass
+{
+	color: #ffffff;
+	background-color: #4382f0;
+	width: 20rem;
+	margin-left:40%;
+	margin-top:1rem;
+	font-size:large;
+}
+
+.offerHeaderTextClass
+{
+	margin-left: 32%;
+    font-size: x-large;
+    font-weight: bolder;
+    color:  #4382f0;
+}
+
+.width100percent
+{
+	width:100%;
+}
+
+.quickLinkHeader
+{
+	font-size:1rem;
+}
+
+.quickLinkDesc
+{
+	font-size:.5rem;
 }
 
 .user-earn
@@ -137,7 +174,6 @@ body{
 .brand-list
 {	
     height: 32rem;
-    overflow-y: auto;
 }
 
 .offer-list
@@ -166,9 +202,8 @@ body{
 
 .pop-logo
 {
-	height: 33rem;
+	height: 20rem;
 }
-
 .trend-tile-height
 {
 	height: 8rem;

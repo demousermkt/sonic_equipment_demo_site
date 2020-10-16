@@ -2,116 +2,47 @@ var landingModule = angular.module('dc.landing');
 
  landingModule.controller('landingCtrl',['$scope','$state', '$http','$rootScope','$interval',
     function($scope,$state,$http,$rootScope,$interval){
-        $scope.userBrandList = [{brandName : "Brand1",
-                                description : "Brand 1",
-                                logo : "img/popbrand1.png",
+        $scope.userBrandList = [{brandName : "Press Release",
+                                description : "Lastest Communications from Sonics",
+                                logo : "img/press.png",
                                 brandOptionsVisible : true
                                 },
                                 {
-                                    brandName : "Brand2",
-                                description : "Brand 2",
-                                logo : "img/popbrand2.png"
+                                brandName : "Blogs",
+                                description : "Visit for latest blogs",
+                                logo : "img/blogs.png"
                                 },
-                                {
-                                    brandName : "Brand3",
-                                description : "Brand 3",
-                                logo : "img/popbrand3.png"
-                                },
-                                {
-                                    brandName : "Brand4",
-                                description : "Brand 4",
-                                logo : "img/popbrand4.png"
-                                },
-                                {
-                                    brandName : "Brand5",
-                                description : "Brand 5",
-                                logo : "img/popbrand5.png"
-                                },
-                                {
-                                    brandName : "Brand6",
-                                description : "Brand 6",
-                                logo : "img/popbrand6.png"
-                                },
-                                {
-                                    brandName : "Brand7",
-                                description : "Brand 7",
-                                logo : "img/popbrand7.png"
-                                },
-                                {brandName : "Brand8",
-                                description : "Brand 8",
-                                logo : "img/popbrand8.png"},
-                                {
-                                    brandName : "Brand9",
-                                description : "Brand 9",
-                                logo : "img/popbrand9.png"
-                                },
-                                {
-                                    brandName : "Brand10",
-                                description : "Brand 10",
-                                logo : "img/popbrand10.png"
-                                },
-                                {
-                                    brandName : "Brand11",
-                                description : "Brand 11",
-                                logo : "img/popbrand11.png"
-                                },
-                                {
-                                    brandName : "Brand12",
-                                description : "Brand 12",
-                                logo : "img/popbrand12.png"
-                                }];
+								{
+								brandName : "Upcoming Events",
+                                description : "Look up for upcoming events",
+                                logo : "img/events.png"
+								},
+								{
+								brandName : "Help Center",
+                                description : "One stop for your Learning journeys ",
+                                logo : "img/help.png"	
+								}];
 
         $scope.popOffersList = [{
-                    offerBrand : "Amazon",
-                    offerImage : "img/offer1.png",
+                    offerBrand : "Introducing the New Sonic pad",
+                    offerImage : "img/tablet-in-hand.png",
+					ctaText:"More Information Here",
                     logo : "img/offericon1.png"
         },
         {
-                    offerBrand : "Make my Trip",
-                    offerImage : "img/offer2.png",
+                    offerBrand : "Its Time for Sonic Live Again",
+                    offerImage : "img/event.jpg",
+					ctaText:"Register Here",
                     logo : "img/offericon2.png"
         },
         {
-                    offerBrand : "Food Panda",
-                    offerImage : "img/offer3.png",
+                    offerBrand : "XMWorld 2020 Award for Sonic",
+                    offerImage : "img/award.jpg",
+					ctaText:"Read more here",
                     logo : "img/offericon3.png"
-        },
-        {
-                    offerBrand : "First Cry",
-                    offerImage : "img/offer4.png",
-                    logo : "img/offericon4.png"
-        },
-        {
-                    offerBrand : "Big Basket",
-                    offerImage : "img/offer5.png",
-                    logo : "img/offericon5.png"
         }];
 
-        $scope.popOffersList = [{
-                    offerBrand : "Amazon",
-                    offerImage : "img/offer1.png",
-                    logo : "img/offericon1.png"
-        },
-        {
-                    offerBrand : "Make my Trip",
-                    offerImage : "img/offer2.png",
-                    logo : "img/offericon2.png"
-        },
-        {
-                    offerBrand : "Food Panda",
-                    offerImage : "img/offer3.png",
-                    logo : "img/offericon3.png"
-        },
-        {
-                    offerBrand : "First Cry",
-                    offerImage : "img/offer4.png",
-                    logo : "img/offericon4.png"
-        },
-        {
-                    offerBrand : "Big Basket",
-                    offerImage : "img/offer5.png",
-                    logo : "img/offericon5.png"
-        }];
+      
 
 
           $scope.dataArray = [
