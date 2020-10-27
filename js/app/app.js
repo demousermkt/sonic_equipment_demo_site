@@ -27,6 +27,35 @@ window.app = angular.module('app',[
         $state.go('landing');
     }
 	
+	$scope.navigateTab = function(ind)
+	{
+		if(ind == 1)
+		{
+			$state.go('products');
+		}
+		else if(ind == 2)
+		{
+			$state.go('customers');
+		}
+		else if(ind == 3)
+		{
+			$state.go('careers');
+		}
+		else
+			$state.go('landing')
+		
+		$(document).ready(function() {
+			$('.navbar ul li').click(function(e) {
+				$('.navbar ul li.active').removeClass('active');
+				var $this = $(this);
+				if (!$this.hasClass('active')) {
+					$this.addClass('active');
+				}
+				e.preventDefault();
+			});
+		});
+	}
+	
 	$scope.navigateToProducts = function()
 	{
 		$state.go('products');
