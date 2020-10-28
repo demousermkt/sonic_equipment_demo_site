@@ -53,6 +53,32 @@ body{
 	color: #4382f0 !important;
 }
 
+.landingImgClass
+{
+	width: 60rem;
+    height: 27rem;
+}
+
+.lndgSectionClass
+{
+	font-size: x-large;
+    font-weight: bolder;
+    color:  #4382f0;
+}
+
+.lndgSectionDetClass
+{
+	font-size: large;
+}
+
+.lndgSectionBtnClass
+{
+	color: #ffffff;
+	background-color: #4382f0;
+	width: 20rem;
+	font-size:large;
+}
+
 .top-header-font-class
 {
 	color: gray;
@@ -268,6 +294,16 @@ body{
 .move-left-class
 {
 	margin-left: -1rem;
+}
+
+.margin-left-1
+{
+	margin-left: 1rem;
+}
+
+.margin-left-2
+{
+	margin-left:2rem;
 }
 
 .margin-class-1
