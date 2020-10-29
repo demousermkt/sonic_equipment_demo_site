@@ -152,6 +152,37 @@ body{
 	font-size:.5rem;
 }
 
+.landImgClass
+{
+	width:30rem;
+	height:30rem;
+}
+
+.landingEndSection
+{
+	margin-left:12rem;
+	width:4rem;
+	height:4rem;
+	background-color:gray;
+}
+
+
+.colorWhiteClass
+{
+	color:#ffffff;
+}
+
+.padding-top-25
+{
+	padding-top:25%
+}
+
+.landingCaseClass
+{
+	width:58rem;
+	height:30rem;
+	text-align:center;
+}
 .user-earn
 {
 	width: 4rem;
@@ -183,6 +214,18 @@ body{
 .on-hover-class:hover
 {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+hoverclass
+{
+	text-color:#000000;
+	text-decoration:none;
+}
+
+hoverclass:hover
+{
+	text-color:#ffffff;
+	text-decoration: underline;
 }
 
 .coupon-class
@@ -228,8 +271,11 @@ body{
 
 .pop-logo
 {
-	height: 20rem;
+	height: 24rem;
+    align-content: center;
+    width: fit-content;
 }
+
 .trend-tile-height
 {
 	height: 8rem;
@@ -346,6 +392,22 @@ body{
 {
 	font-size: smaller;
 }
+
+.font-weight-600
+{
+	font-weight:600;
+}
+
+.font-weight-700
+{
+	font-weight:700;
+}
+
+.font-size-larger
+{
+	font-size:larger;
+}
+
 
 .reco-logo
 {
@@ -566,6 +628,11 @@ margin-left:10rem;
 .margin-bottom-1
 {
 	margin-bottom : 1rem;
+}
+
+.margin-top-1
+{
+	margin-top:1rem;
 }
 
 .show-selected-class

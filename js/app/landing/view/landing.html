@@ -24,7 +24,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-model="popOffersList">
 						<div ng-if="selectedTab ==$index" ng-repeat="offer in popOffersList track by $index"><!---->
 							<div class="offerHeaderTextClass">{{offer.offerBrand}}</div><!---->
-							<img src="{{offer.offerImage}}" class="width100percent pop-logo"/>
+							<img src="{{offer.offerImage}}" class="pop-logo" style="width:60rem;margin-left:20rem;margin-right:10rem"/>
 							<button class="ctaBtnclass enable-click">{{offer.ctaText}}</button>
 						</div>
 					</div>
@@ -40,14 +40,14 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-top-1">
 				<p class="lndgSectionClass">TRANSFORM NOW</p>
 				<p class="lndgSectionDetClass">Sonic is transforming how businesses work. Are you ready to work differently?</p>
-				<button class="lndgSectionBtnClass">LEARN HOW</button>
+				<button class="lndgSectionBtnClass enable-click">LEARN HOW</button>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-top-1">
 				<p class="lndgSectionClass">OFFICES</p>
 				<p class="lndgSectionDetClass">Sonic is transforming how businesses work. Are you ready to work differently?</p>
-				<button class="lndgSectionBtnClass">LEARN MORE</button>
+				<button class="lndgSectionBtnClass enable-click">LEARN MORE</button>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-top-1">
 				<img src="img/landingOfcImg.jpg" class="landingImgClass"/>		
@@ -60,17 +60,55 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-top-1">
 				<p class="lndgSectionClass">WAREHOUSES</p>
 				<p class="lndgSectionDetClass">Sonic is transforming how businesses work. Are you ready to work differently?</p>
-				<button class="lndgSectionBtnClass">VIEW DETAILS</button>
+				<button class="lndgSectionBtnClass enable-click">VIEW DETAILS</button>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-top-1">
 				<p class="lndgSectionClass">SHOP FLOORS</p>
 				<p class="lndgSectionDetClass">Sonic is transforming how businesses work. Are you ready to work differently?</p>
-				<button class="lndgSectionBtnClass">VIEW DETAILS</button>
+				<button class="lndgSectionBtnClass enable-click">VIEW DETAILS</button>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 padding-top-1">
 				<img src="img/landingShopFloorImg.jpg" class="landingImgClass"/>		
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<img src="img/custFeedbackImg.jpg" class="landImgClass margin-top-1 on-hover-class"/>
+				<div class="text-center-class"><a class="on-hover-class">Feedback on Sonic from Customers</a></div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<img src="img/covidResponseImg.jpg" class="landImgClass margin-top-1 on-hover-class"/>
+				<div class="text-center-class"><a class="on-hover-class">Covid 19 Benchmark Data</a></div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<div class="landingCaseClass header-below-class colorWhiteClass margin-class-1 on-hover-class">
+					<p class="padding-top-25"><a class="on-hover-class colorWhiteClass">Case Studies and Insights</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="row text-center-class margin-top-1 font-size-larger margin-bottom-1 font-weight-600">What can we help you with?</div>
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<img src="img/orders.png" class="landingEndSection on-hover-class"/>
+				<div class="text-center-class quickLinkHeader font-weight-700"><a class="on-hover-class">Order Supplies</a></div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<img src="img/customerSupport.png" class="landingEndSection on-hover-class"/>
+				<div class="text-center-class quickLinkHeader font-weight-700"><a class="on-hover-class">Customer Support</a></div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" ng-click="">
+				<img src="img/careers.png" class="landingEndSection on-hover-class"/>
+				<div class="text-center-class quickLinkHeader font-weight-700"><a class="on-hover-class">Careers</a></div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<img src="img/contactus.png" class="landingEndSection on-hover-class"/>
+				<div class="text-center-class quickLinkHeader font-weight-700"><a class="on-hover-class">Contact Us</a></div>
 			</div>
 		</div>
 	</div>

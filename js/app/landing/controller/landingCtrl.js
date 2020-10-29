@@ -25,7 +25,7 @@ var landingModule = angular.module('dc.landing');
 
         $scope.popOffersList = [{
                     offerBrand : "Introducing the New Sonic pad",
-                    offerImage : "img/tablet-in-hand.png",
+                    offerImage : "img/SonicPad-Floating.png",
 					ctaText:"More Information Here",
                     logo : "img/offericon1.png"
         },
