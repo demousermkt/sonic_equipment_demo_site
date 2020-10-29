@@ -214,18 +214,42 @@ body{
 .on-hover-class:hover
 {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+	background-color:#efefef;
 }
 
-hoverclass
+.hoverclass
 {
 	text-color:#000000;
 	text-decoration:none;
 }
 
-hoverclass:hover
+.hoverclass:hover
 {
 	text-color:#ffffff;
 	text-decoration: underline;
+}
+
+.landingConnectClass
+{
+	width:100rem;
+	margin-left:45rem;
+}
+
+.width-30
+{
+	width:30rem;
+}
+
+.prodTypesSection
+{
+	margin-left: 1rem;
+    width: 15rem;
+    height: 20rem;
+}
+
+.prodFeaturesClass
+{
+	white-space: pre-wrap;
 }
 
 .coupon-class

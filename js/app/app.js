@@ -29,6 +29,7 @@ window.app = angular.module('app',[
 	
 	$scope.navigateTab = function(ind)
 	{
+		console.log("tab index "+ind); 
 		if(ind == 1)
 		{
 			$state.go('products');
@@ -91,6 +92,16 @@ window.app = angular.module('app',[
 		}
 	})
 	.state('customers',{
+        url:'/customers',
+        views:{
+
+            'main@':{
+                templateUrl:'js/app/customers/view/customers.html',
+                controller :'customersCtrl'
+            }
+        }
+    })
+	.state('careers',{
         url:'/customers',
         views:{
 

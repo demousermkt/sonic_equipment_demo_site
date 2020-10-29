@@ -10,6 +10,9 @@
           <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
           <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
           <link rel="stylesheet" href="js/vendor/jk-carousel.min.css" />
+		  <meta name="title" content="Sonic Inc">
+		  <meta name="description" content="Awesome Equipments for all your business needs">
+		  <meta name="image" content="img/Sonic_Logo">
    </head>
    
    <body ng-controller="appCtrl">
@@ -36,7 +39,7 @@
 		<nav class="navbar navbar-default move-left-class">
 		  <div class="container-fluid">
 			<ul class="nav navbar-nav" id="menubar">
-			  <li class="active"><a href="#" class="menuBtnColClass">Home</a></li>
+			  <li class="active"><a ng-click="navigateTab(0);"class="menuBtnColClass">Home</a></li>
 			  <li><a ng-click="navigateTab(1);" class="menuBtnColClass">Products And Services</a></li>
 			  <li><a ng-click="navigateTab(2)" class="menuBtnColClass" se>Customer Success</a></li>
 			  <li><a ng-click="navigateTab(3)" class="menuBtnColClass">Careers</a></li>

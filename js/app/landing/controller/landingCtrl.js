@@ -200,6 +200,37 @@ var landingModule = angular.module('dc.landing');
         $scope.goToMyPage = function(){
             $state.go('branddetails')
         }
+		
+		
+		$scope.navigateTab = function(ind)
+		{
+			console.log("tab index "+ind); 
+			if(ind == 1)
+			{
+				$state.go('products');
+			}
+			else if(ind == 2)
+			{
+				$state.go('customers');
+			}
+			else if(ind == 3)
+			{
+				$state.go('customers');
+			}
+			else
+				$state.go('landing')
+			
+			$(document).ready(function() {
+				$('.navbar ul li').click(function(e) {
+					$('.navbar ul li.active').removeClass('active');
+					var $this = $(this);
+					if (!$this.hasClass('active')) {
+						$this.addClass('active');
+					}
+					e.preventDefault();
+				});
+			});
+		}
     }]);
 
 landingModule.controller('switchPersonaCtrl',['$scope','$state','$uibModalInstance',function($scope,$state,$uibModalInstance){
