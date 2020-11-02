@@ -79,6 +79,27 @@ body{
 	font-size:large;
 }
 
+.product-button-class
+{
+	color: #ffffff;
+	background-color: #4382f0;
+	margin-bottom: 1rem;
+    font-size: small;
+	margin-left:1rem
+}
+
+.small-font-class
+{
+	font-size:small;
+}
+
+.prod-service-class
+{
+	margin-left: 3rem;
+    width: 11rem;
+    height: 13rem;
+}
+
 .top-header-font-class
 {
 	color: gray;
@@ -86,6 +107,13 @@ body{
 	
 }
 
+.product-support-class
+{
+	width: 3rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+}
+	
 .header-text-class
 {
 	font-family:bold;
@@ -369,6 +397,11 @@ body{
 .margin-left-1
 {
 	margin-left: 1rem;
+}
+
+.margin-left-10
+{
+	margin-left:10rem;
 }
 
 .margin-left-2
