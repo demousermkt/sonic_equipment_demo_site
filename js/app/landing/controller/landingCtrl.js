@@ -215,7 +215,7 @@ var landingModule = angular.module('dc.landing');
 			}
 			else if(ind == 3)
 			{
-				$state.go('customers');
+				$state.go('careers');
 			}
 			else
 				$state.go('landing')

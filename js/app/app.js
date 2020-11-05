@@ -102,12 +102,12 @@ window.app = angular.module('app',[
         }
     })
 	.state('careers',{
-        url:'/customers',
+        url:'/careers',
         views:{
 
             'main@':{
-                templateUrl:'js/app/customers/view/customers.html',
-                controller :'customersCtrl'
+                templateUrl:'js/app/careers/view/careers.html',
+                controller :'careersCtrl'
             }
         }
     })
