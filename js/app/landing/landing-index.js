@@ -1,2 +1,2 @@
-angular.module('dc.landing', ['jkAngularCarousel'
+angular.module('dc.landing', ['jkAngularCarousel','dc.sonicpad'
 ]);

@@ -25,7 +25,7 @@
 						<div ng-if="selectedTab ==$index" ng-repeat="offer in popOffersList track by $index"><!---->
 							<div class="offerHeaderTextClass">{{offer.offerBrand}}</div><!---->
 							<img src="{{offer.offerImage}}" class="pop-logo" style="width:60rem;margin-left:20rem;margin-right:10rem"/>
-							<button class="ctaBtnclass enable-click">{{offer.ctaText}}</button>
+							<button class="ctaBtnclass enable-click" ng-click="navigateToProducts()">{{offer.ctaText}}</button>
 						</div>
 					</div>
 				</div>
@@ -119,37 +119,5 @@
 		<button class="lndgSectionBtnClass enable-click">Sign up</button>
 		</div>
 	</div>
-	<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-top-1 padding-left-0" ng-model="couponsList">
-		<div class="col-md-4 coupon-class padding-top-1 box-shadow-class enable-click" ng-repeat="coupon in couponsList track by $index" ng-if="coupon.showCoupon">
-			<img src="{{coupon.logo}}" class="coupon-logo" />
-			<span>{{coupon.offer}}</span>
-		</div>
-	</div> -->
-	<!-- <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 padding-top-1 padding-left-0" ng-model="trendsInMyBrand">
-		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Trends in My Brands</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 padding-top-1" ng-repeat="trend in trendsInMyBrand track by $index">
-				<div class="panel panel-default border-none box-shadow-class enable-click">
-					<div class="panel-heading background-white">
-						{{trend.trendTitle}}
-					</div>
-					<div class="panel-body trend-tile-height">
-						<div class="row padding-top-3">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-								<div>{{trend.brandName}}</div>
-								<div style="width:20rem"><i class="fa fa-clock-o" aria-hidden="true"></i><span> {{trend.expiresOn}}</span></div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-								<img src="{{trend.logo}}" class="trend-logo pull-right" />
-							</div>
-						</div>
-					</div>
-					<div>
-						<img src="img/mail-box.png" class="width100percent" />
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
 </div>
 </section>

@@ -3,7 +3,8 @@ window.app = angular.module('app',[
 	'dc.products',
 	'dc.customers',
     'ui.bootstrap',
-    'ui.router'
+    'ui.router',
+	'dc.sonicpad'
     ])
 
 .run(['$rootScope', function ($rootScope) {
@@ -108,6 +109,16 @@ window.app = angular.module('app',[
             'main@':{
                 templateUrl:'js/app/careers/view/careers.html',
                 controller :'careersCtrl'
+            }
+        }
+    })
+	.state('sonicpad',{
+        url:'/sonicpad',
+        views:{
+
+            'main@':{
+                templateUrl:'js/app/sonicpad/view/sonicpad.html',
+                controller :'sonicpadCtrl'
             }
         }
     })

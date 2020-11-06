@@ -31,26 +31,26 @@ body{
 	/*padding: 1%;*/
 	width: 7rem;
     height: 5rem;
-	background-color: #4382f0;
+	background-color: #0696FF;
 }
 
 .header-class
 {
 	width :100vw;
 	height: 1rem;
-	background: linear-gradient(to right, #ffffff 0%, #4382f0 100%)
+	background: linear-gradient(to right, #ffffff 0%, #0696FF 100%)
 	/*background-color: #AA4444;*/
 	/*color: #ffffff;*/
 }
 
 .header-below-class
 {
-	background-color: #4382f0 !important;
+	background-color: #0696FF !important;
 }
 
 .menuBtnColClass
 {
-	color: #4382f0 !important;
+	color: #0696FF !important;
 }
 
 .landingImgClass
@@ -63,7 +63,7 @@ body{
 {
 	font-size: x-large;
     font-weight: bolder;
-    color:  #4382f0;
+    color:  #0696FF;
 }
 
 .lndgSectionDetClass
@@ -74,7 +74,7 @@ body{
 .lndgSectionBtnClass
 {
 	color: #ffffff;
-	background-color: #4382f0;
+	background-color: #0696FF;
 	width: 20rem;
 	font-size:large;
 }
@@ -82,7 +82,7 @@ body{
 .product-button-class
 {
 	color: #ffffff;
-	background-color: #4382f0;
+	background-color: #0696FF;
 	margin-bottom: 1rem;
     font-size: small;
 	margin-left:1rem
@@ -162,11 +162,30 @@ body{
 .ctaBtnclass
 {
 	color: #ffffff;
-	background-color: #4382f0;
+	background-color: #0696FF;
 	width: 20rem;
 	margin-left:40%;
 	margin-top:1rem;
 	font-size:large;
+}
+.sonicpadImgClass {
+	width: 35%;
+    height: 25rem;
+    margin-left: 28%;
+    margin-top: 4%;
+  transition: width 4s, height 4s, transform 4s;
+}
+
+.sonicpadImgClass:hover
+{
+  -webkit-transform: rotate(10deg);
+   transform: rotate(10deg);
+}
+
+.sonicImgClass
+{
+	width: 40%;
+    height: 30rem;
 }
 
 .offerHeaderTextClass
@@ -174,7 +193,7 @@ body{
 	text-align:center;
     font-size: x-large;
     font-weight: bolder;
-    color:  #4382f0;
+    color:  #0696FF;
 }
 
 .width100percent
@@ -473,11 +492,24 @@ body{
 	font-weight:700;
 }
 
+.font-weight-800
+{
+	font-weight:800;
+}
 .font-size-larger
 {
 	font-size:larger;
 }
 
+.font-size-large
+{
+	font-size:large;
+}
+
+.border-rad-class1
+{
+	border-radius:1rem;
+}
 
 .reco-logo
 {
@@ -598,7 +630,7 @@ body{
 .reviews-section
 {
 	font-size: large;
-    color: #4382f0;
+    color: #0696FF;
     font-weight: 600;
 }
 
@@ -704,6 +736,11 @@ margin-left:10rem;
 .margin-top-1
 {
 	margin-top:1rem;
+}
+
+.margin-top-10percent
+{
+	margin-top:10%;
 }
 
 .show-selected-class
