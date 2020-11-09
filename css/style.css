@@ -511,6 +511,16 @@ body{
 	font-size:large;
 }
 
+.font-size-xxxlarge
+{
+	font-size:xxx-large;
+}
+
+.font-size-xlarge
+{
+	font-size:x-large
+}
+
 .border-rad-class1
 {
 	border-radius:1rem;
