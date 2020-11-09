@@ -29,8 +29,8 @@ body{
 .logo-class-brand
 {
 	/*padding: 1%;*/
-	width: 5rem;
-    height: 5rem;
+	width: 7rem;
+    height: 7rem;
 	background-color: #0696FF;
 }
 
@@ -46,6 +46,9 @@ body{
 .header-below-class
 {
 	background-color: #0696FF !important;
+	padding-left: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 .menuBtnColClass
