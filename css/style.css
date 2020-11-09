@@ -364,6 +364,11 @@ body{
     width: fit-content;
 }
 
+.menu-row-class
+{
+	width:103vw;
+}
+
 .trend-tile-height
 {
 	height: 8rem;
