@@ -29,7 +29,7 @@ body{
 .logo-class-brand
 {
 	/*padding: 1%;*/
-	width: 7rem;
+	width: 5rem;
     height: 5rem;
 	background-color: #0696FF;
 }
@@ -184,8 +184,13 @@ body{
 
 .sonicImgClass
 {
-	width: 40%;
-    height: 30rem;
+	width: 30rem;
+    height: 45rem;
+}
+
+.paddingbottom5
+{
+	padding-bottom : 5rem;
 }
 
 .offerHeaderTextClass
