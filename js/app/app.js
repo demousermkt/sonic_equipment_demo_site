@@ -4,7 +4,8 @@ window.app = angular.module('app',[
 	'dc.customers',
     'ui.bootstrap',
     'ui.router',
-	'dc.sonicpad'
+	'dc.sonicpad',
+	'dc.contact'
     ])
 
 .run(['$rootScope', function ($rootScope) {
@@ -42,6 +43,10 @@ window.app = angular.module('app',[
 		else if(ind == 3)
 		{
 			$state.go('careers');
+		}
+		else if(ind == 4)
+		{
+			$state.go('contact');
 		}
 		else
 			$state.go('landing')
@@ -119,6 +124,16 @@ window.app = angular.module('app',[
             'main@':{
                 templateUrl:'js/app/sonicpad/view/sonicpad.html',
                 controller :'sonicpadCtrl'
+            }
+        }
+    })
+	.state('contact',{
+        url:'/contact',
+        views:{
+
+            'main@':{
+                templateUrl:'js/app/contact/view/contact.html',
+                controller :'contactCtrl'
             }
         }
     })

@@ -93,6 +93,10 @@ var landingModule = angular.module('dc.landing');
 			{
 				$state.go('careers');
 			}
+			else if(ind == 4)
+			{
+				$state.go('contact');
+			}
 			else
 				$state.go('landing')
 			

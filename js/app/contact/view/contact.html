@@ -1,0 +1,33 @@
+<section >
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 offerHeaderTextClass">Contact Us</div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><img class="customerHeaderImgClass"src="img/contact.jpg"></div>
+	</div>
+	<div class="row">
+		<nav class="navbar navbar-default move-left-class">
+		  <div class="container-fluid">
+			<ul class="nav navbar-nav" id="menubar">
+			  <li class="active"><a ng-click="selctedTab == 0;" class="menuBtnColClass">E-mail</a></li>
+			  <li><a ng-click="navigateToSection(1); selctedTab == 1" class="menuBtnColClass">Phone</a></li>
+			  <li><a ng-click="navigateToSection(3); selctedTab == 3" class="menuBtnColClass">Chat</a></li>
+			</ul>
+		  </div>
+		</nav>
+		<div ng-show="selectedTab == 0">
+		<form>
+		  <label for="fname">First name:</label><br>
+		  <input type="text" id="fname" name="fname" value="John"><br>
+		  <label for="lname">Last name:</label><br>
+		  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+		  <input type="submit" value="Submit">
+		</form>
+		</div>
+		<div ng-show="selectedTab == 1">
+		Call us at 
+		or Request call back
+		</div>
+		<div ng-show="selectedTab == 3">
+		Chat
+		</div>
+	</div>
+</section>

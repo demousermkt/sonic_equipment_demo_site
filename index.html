@@ -29,9 +29,9 @@
 	  <div class="row">
 		<div class="col-md-3 pull-right top-header-font-class">
 			<span>Press |</span>
-			<span>Contact Us |</span>
+			<span><a ng-click="navigateTab(4);">Contact Us </a>|</span>
 			<span>Corporate Information |</span>
-			<span><a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin'});">Login</a> |</span>
+			<span><a href="#" ng-click="gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin'});">Login</a> |</span>
 			<span><img src="img/user_avatar.png" class="logo-class"> Hello User </span>
 		</div>
 	  </div>
@@ -49,7 +49,7 @@
 			<ul class="nav navbar-nav" id="menubar">
 			  <li class="active"><a ng-click="navigateTab(0);"class="menuBtnColClass">Home</a></li>
 			  <li><a ng-click="navigateTab(1);" class="menuBtnColClass">Products And Services</a></li>
-			  <li><a ng-click="navigateTab(2)" class="menuBtnColClass" se>Customer Success</a></li>
+			  <li><a ng-click="navigateTab(2)" class="menuBtnColClass">Customer Success</a></li>
 			  <li><a ng-click="navigateTab(3)" class="menuBtnColClass">Careers</a></li>
 			</ul>
 		  </div>
@@ -109,6 +109,9 @@
    
    <script src="js/app/sonicpad/sonic-index.js"></script> 
    <script src="js/app/sonicpad/controller/sonicpadCtrl.js"></script>
+   
+   <script src="js/app/contact/contact-index.js"></script> 
+   <script src="js/app/contact/controller/contactCtrl.js"></script>
    
    <script src="js/app/app.js"></script>
 </html>
