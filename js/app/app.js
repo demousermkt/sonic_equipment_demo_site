@@ -30,7 +30,20 @@ window.app = angular.module('app',[
     }
     
     $scope.login = function(){
-        var result = gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin'});
+       var profile;
+        var params = {
+            screenSet: 'Default-RegistrationLogin',
+            containerID: 'RAASLogin',
+            customLang: {
+                    email_already_exists: 'You already have an account'
+            },
+            onAfterSubmit: event => {
+                if (event.screen === "gigya-register-screen"){    
+                  profile = event.profile;
+                }
+            }
+        }
+        var result = gigya.accounts.showScreenSet(params);
         
         document.getElementById("loggedIn").style.display = "none";
         document.getElementById("loggedOut").style.display = "block";
