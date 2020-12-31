@@ -31,12 +31,15 @@ window.app = angular.module('app',[
     
     $scope.login = function(){
         var result = gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin'});
+        
         document.getElementById("loggedIn").style.display = "none";
         document.getElementById("loggedOut").style.display = "block";
         document.getElementById("profile").style.display = "block";
     }
 
     $scope.profile = function() {
+        var loginname = gigya.accounts.profile.login;
+        var name1 = gigya.accounts.profile.loginname;
         var result =gigya.accounts.showScreenSet({screenSet: 'Default-ProfileUpdate'});
 }
 	$scope.navigateTab = function(ind)
