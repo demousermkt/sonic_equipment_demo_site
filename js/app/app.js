@@ -28,7 +28,17 @@ window.app = angular.module('app',[
         $("#myModal").css("z-index", "1500");*/
         $state.go('landing');
     }
-	
+    
+    $scope.login = function(){
+        var result = gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin'});
+        document.getElementById("loggedIn").style.display = "none";
+        document.getElementById("loggedOut").style.display = "block";
+        document.getElementById("profile").style.display = "block";
+    }
+
+    $scope.profile = function() {
+        var result =gigya.accounts.showScreenSet({screenSet: 'Default-ProfileUpdate'});
+}
 	$scope.navigateTab = function(ind)
 	{
 		console.log("tab index "+ind); 
@@ -138,6 +148,11 @@ window.app = angular.module('app',[
         }
     })
   $urlRouterProvider.otherwise('/landing');
-
+ //function that allows you to determine if the gigya.js has loaded
+ $(document).ready(function() {
+    document.getElementById("loggedOut").style.display = "none";
+    document.getElementById("loggedIn").style.display = "block";
+    document.getElementById("profile").style.display = "none";
+});
 
 }]);
