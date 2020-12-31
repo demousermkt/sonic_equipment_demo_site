@@ -33,10 +33,6 @@ window.app = angular.module('app',[
        var profile;
         var params = {
             screenSet: 'Default-RegistrationLogin',
-            containerID: 'RAASLogin',
-            customLang: {
-                    email_already_exists: 'You already have an account'
-            },
             onAfterSubmit: event => {
                 if (event.screen === "gigya-register-screen"){    
                   profile = event.profile;
