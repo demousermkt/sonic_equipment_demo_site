@@ -43,9 +43,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<span><a ng-click="navigateTab(4);">Contact Us </a>|</span>
 			<span>Corporate Information |</span>
       <!-- <span><a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin'});">Login</a> |</span> -->
-      <span ng-hide = "$scope.profile.email"><a href="#" ng-click="login();" id="loggedIn" >Login</a> |</span> 
-       <span ng-show = "$scope.profile.email"><a ngif="loggedIn" href="#" ng-click="logout();" id="loggedOut" >Logout</a> |</span> 
-       <span ng-show = "$scope.profile.email"><a ngif="loggedIn" href="#" ng-click="profile()" id="profile" >Hello {{$scope.profile.email}}</a></span>
+      <span ng-hide = "$scope.profile.email"><a href="#" ng-click="login();" id="loggedIn" >Login</a></span> 
+       <span ng-show = "$scope.profile.email"> |<a ngif="loggedIn" href="#" ng-click="logout();" id="loggedOut" >Logout</a></span> 
+       <span ng-show = "$scope.profile.email"> |<a ngif="loggedIn" href="#" ng-click="profile()" id="profile" >Hello {{$scope.profile.email}}</a></span>
       <!-- <span><img src="img/user_avatar.png" class="logo-class"> Hello User </span> -->
 		</div>
 	  </div>
