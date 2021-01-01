@@ -37,9 +37,9 @@ window.app = angular.module('app',[
                 if (event.screen === "gigya-register-screen"){    
                   profile = event.profile;
 
-                  document.getElementById("loggedIn").style.display = "none";
-                  document.getElementById("loggedOut").style.display = "block";
-                  document.getElementById("profile").style.display = "block";
+                  //document.getElementById("loggedIn").style.display = "none";
+                  //document.getElementById("loggedOut").style.display = "block";
+                  //document.getElementById("profile").style.display = "block";
                 }
             }
         }
