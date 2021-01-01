@@ -35,7 +35,9 @@ window.app = angular.module('app',[
             screenSet: 'Default-RegistrationLogin',
             onAfterSubmit: event => {
                 if (event.screen === "gigya-register-screen"){    
-                  profile = event.profile;
+                  profile = event.formData;
+                  profile1 = event.data;
+                  profile2 = event.profile;
                 }
             }
         }
