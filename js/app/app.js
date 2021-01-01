@@ -15,6 +15,7 @@ window.app = angular.module('app',[
 
 .controller('appCtrl',['$scope','$uibModal','$state',function($scope,$uibModal,$state){
     console.dir("in app ctrl");
+    $scope.profile;
     $scope.switchPersona = function(){
        /* var modalInstance = $uibModal.open({
             templateUrl : 'js/app/landing/view/switchPersonaDialog.html',
@@ -30,28 +31,25 @@ window.app = angular.module('app',[
     }
     
     $scope.login = function(){
-       var profile;
         var params = {
             screenSet: 'Default-RegistrationLogin',
             onAfterSubmit: event => {
                 if (event.screen === "gigya-register-screen"){    
-                  profile = event.formData;
-                  profile1 = event.data;
-                  profile2 = event.profile;
+                  profile = event.profile;
+
+                  document.getElementById("loggedIn").style.display = "none";
+                  document.getElementById("loggedOut").style.display = "block";
+                  document.getElementById("profile").style.display = "block";
                 }
             }
         }
         var result = gigya.accounts.showScreenSet(params);
         
-        document.getElementById("loggedIn").style.display = "none";
-        document.getElementById("loggedOut").style.display = "block";
-        document.getElementById("profile").style.display = "block";
+        
     }
 
     $scope.profile = function() {
-        var loginname = gigya.accounts.profile.login;
-        var name1 = gigya.accounts.profile.loginname;
-        var result =gigya.accounts.showScreenSet({screenSet: 'Default-ProfileUpdate'});
+        gigya.accounts.showScreenSet({screenSet: 'Default-ProfileUpdate'});
 }
 	$scope.navigateTab = function(ind)
 	{
