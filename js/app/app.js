@@ -35,7 +35,7 @@ window.app = angular.module('app',[
             screenSet: 'Default-RegistrationLogin',
             onAfterSubmit: event => {
                 if (event.screen === "gigya-login-screen"){    
-                  profile = event.profile.email;
+                  this.profile = event.profile.email;
 
                   document.getElementById("loggedIn").style.display = "none";
                   document.getElementById("loggedOut").style.display = "block";
