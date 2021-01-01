@@ -35,7 +35,7 @@ window.app = angular.module('app',[
             screenSet: 'Default-RegistrationLogin',
             onAfterSubmit: event => {
                 if (event.screen === "gigya-login-screen"){    
-                  profile = event.profile;
+                  profile = event.profile.email;
 
                   document.getElementById("loggedIn").style.display = "none";
                   document.getElementById("loggedOut").style.display = "block";
@@ -43,9 +43,7 @@ window.app = angular.module('app',[
                 }
             }
         }
-        var result = gigya.accounts.showScreenSet(params);
-        
-        
+        var result = gigya.accounts.showScreenSet(params);      
     }
 
     $scope.profile = function() {
