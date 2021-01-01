@@ -1,131 +1,136 @@
 <!doctype html>
 <html ng-app="app">
-   
-   <head>
-   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KTKL3CN');</script>
-<!-- End Google Tag Manager -->
-     <link rel="stylesheet" type="text/css" href="js/vendor/jquery-ui-1.11.4/jquery-ui.min.css">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.8.3/select.min.css">
-          <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
-          <link rel="stylesheet" type="text/css" href="css/style.css">  
-          <!--<link rel="stylesheet" type="text/css" href="js/vendor/angular-chart/dist/angular-chart.css">-->
-          <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
-          <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-          <link rel="stylesheet" href="js/vendor/jk-carousel.min.css" />
 
-		  <meta property="og:title" content="Sonic Inc" />
-		  <meta property="og:type" content="website" />
-		  <meta property="og:url" content="https://demousermkt.github.io/sonic_equipment_demo_site" />
-		  <meta property="og:image" content="https://demousermkt.github.io/sonic_equipment_demo_site/img/Sonic_Logo" />
-		  <meta property="og:description" content="Awesome Equipments for all your business needs" />
-		  <!--make the og:image larger -->
-		  <meta name="twitter:card" content="summary_large_image">
-		  <meta name="theme-color" content="#4382f0">
-		  <SCRIPT type="text/javascript" lang="javascript" src="https://cdns.gigya.com/js/gigya.js?apikey=3_QI7I0rLrFacGQh1fvX9Nq6L6H6XwJKz5XHcd7BWwRpPI49yzZILrmoT4Bel-K2Bx"></SCRIPT>
-   </head>
-   
-   <body ng-controller="appCtrl">
-   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTKL3CN"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <div>
-      <div class="row header-class" ng-click="switchPersona()" data-toggle="modal" data-target="#myModal">
-      </div>
-	  <div class="row">
-		<div class="col-md-3 pull-right top-header-font-class">
-			<span>Press |</span>
-			<span><a ng-click="navigateTab(4);">Contact Us </a>|</span>
-			<span>Corporate Information |</span>
-      <!-- <span><a href="#" onclick="gigya.accounts.showScreenSet({screenSet:'Default-RegistrationLogin'});">Login</a> |</span> -->
-      <span ><a href="#" ng-click="login();" id="loggedIn" >Login</a></span>  
-       <span ><a  href="#" ng-click="profile()" id="profile" >Hello {{firstName}} |</a></span>
-       <span ><a  href="#" ng-click="logout();" id="loggedOut" >Logout</a> </span>
-      <!-- <span><img src="img/user_avatar.png" class="logo-class"> Hello User </span> -->
-		</div>
-	  </div>
-	  <div class="row menu-row-class">
-		
-          <img src="img/Sonic_Logo.png" class="logo-class-brand pull-left margin-left-2">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KTKL3CN');</script>
+  <!-- End Google Tag Manager -->
+  <link rel="stylesheet" type="text/css" href="js/vendor/jquery-ui-1.11.4/jquery-ui.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.8.3/select.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!--<link rel="stylesheet" type="text/css" href="js/vendor/angular-chart/dist/angular-chart.css">-->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="js/vendor/jk-carousel.min.css" />
 
-		<div class="col-md-11 header-below-class">
-		  <div class="header-text-class font-size-xlarge font-weight-800">Sonic</div>
-		  <div class="tag-line-class font-size-large">Awesome Equipment</div>
-        </div> 
-	  </div class="row">
-		<nav class="navbar navbar-default move-left-class">
-		  <div class="container-fluid">
-			<ul class="nav navbar-nav" id="menubar">
-			  <li class="active"><a ng-click="navigateTab(0);"class="menuBtnColClass">Home</a></li>
-			  <li><a ng-click="navigateTab(1);" class="menuBtnColClass">Products And Services</a></li>
-			  <li><a ng-click="navigateTab(2)" class="menuBtnColClass">Customer Success</a></li>
-			  <li><a ng-click="navigateTab(3)" class="menuBtnColClass">Careers</a></li>
-			</ul>
-		  </div>
-		</nav>
-	  <div>
-	  </div>
-      <div ui-view="main" class="padding-all-1 margin-left-1">
-      
-      </div>
-	  <div>
-		<img src="img/footer.png" class="width100percent"/>
-	  </div>
+  <meta property="og:title" content="Sonic Inc" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://demousermkt.github.io/sonic_equipment_demo_site" />
+  <meta property="og:image" content="https://demousermkt.github.io/sonic_equipment_demo_site/img/Sonic_Logo" />
+  <meta property="og:description" content="Awesome Equipments for all your business needs" />
+  <!--make the og:image larger -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4382f0">
+  <SCRIPT type="text/javascript" lang="javascript"
+    src="https://cdns.gigya.com/js/gigya.js?apikey=3_QI7I0rLrFacGQh1fvX9Nq6L6H6XwJKz5XHcd7BWwRpPI49yzZILrmoT4Bel-K2Bx"></SCRIPT>
+</head>
+
+<body ng-controller="appCtrl">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTKL3CN" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div>
+    <div class="row header-class" ng-click="switchPersona()" data-toggle="modal" data-target="#myModal">
     </div>
-      
-   </body>
+    <div class="row">
+      <div class="col-md-3 pull-right top-header-font-class">
+        <span>Press |</span>
+        <span><a ng-click="navigateTab(4);">Contact Us </a>|</span>
+        <span>Corporate Information |</span>
+        <span><a href="#" ng-click="login();" id="loggedIn">Login</a></span>
+        <span><a href="#" ng-click="profile()" id="profile">Hello {{firstName}} |</a></span>
+        <span><a href="#" ng-click="logout();" id="loggedOut">Logout</a> </span>
+        <!-- <span><img src="img/user_avatar.png" class="logo-class"> Hello User </span> -->
+      </div>
+    </div>
+    <div class="row menu-row-class">
 
-      <script src="js/vendor-static/jquery.min.js"></script>
-      <script src="js/vendor/jquery-ui-1.11.4/jquery-ui.js"></script>  
-    <!--  <script src="js/vendor/angular.js"></script>-->
-      <!--For Courousel start-->
- <script data-require="angular.js@*" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
-    <script src="https://code.angularjs.org/1.5.0/angular-animate.min.js"></script>
-    <script src="https://code.angularjs.org/1.5.0/angular-aria.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--For courosel end-->
+      <img src="img/Sonic_Logo.png" class="logo-class-brand pull-left margin-left-2">
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/angular-ui-router.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-      <script src="js/vendor/ui-bootstrap-tpls-1.1.1.js"></script>
-      <!--<script src="js/vendor/angular-touch.js"></script>-->
-     <!--  <script src="js/vendor/ui-sortable/src/sortable.js"></script>
+      <div class="col-md-11 header-below-class">
+        <div class="header-text-class font-size-xlarge font-weight-800">Sonic</div>
+        <div class="tag-line-class font-size-large">Awesome Equipment</div>
+      </div>
+    </div class="row">
+    <nav class="navbar navbar-default move-left-class">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav" id="menubar">
+          <li class="active"><a ng-click="navigateTab(0);" class="menuBtnColClass">Home</a></li>
+          <li><a ng-click="navigateTab(1);" class="menuBtnColClass">Products And Services</a></li>
+          <li><a ng-click="navigateTab(2)" class="menuBtnColClass">Customer Success</a></li>
+          <li><a ng-click="navigateTab(3)" class="menuBtnColClass">Careers</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div>
+    </div>
+    <div ui-view="main" class="padding-all-1 margin-left-1">
+
+    </div>
+    <div>
+      <img src="img/footer.png" class="width100percent" />
+    </div>
+  </div>
+
+</body>
+
+<script src="js/vendor-static/jquery.min.js"></script>
+<script src="js/vendor/jquery-ui-1.11.4/jquery-ui.js"></script>
+<!--  <script src="js/vendor/angular.js"></script>-->
+<!--For Courousel start-->
+<script data-require="angular.js@*" data-semver="1.5.0"
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+<script src="https://code.angularjs.org/1.5.0/angular-animate.min.js"></script>
+<script src="https://code.angularjs.org/1.5.0/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--For courosel end-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/angular-ui-router.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="js/vendor/ui-bootstrap-tpls-1.1.1.js"></script>
+<!--<script src="js/vendor/angular-touch.js"></script>-->
+<!--  <script src="js/vendor/ui-sortable/src/sortable.js"></script>
       <script src="js/vendor/ui-touch-punch.js"></script>
 
       <script src="js/vendor/ngDraggable.js"></script>
       <script src="js/vendor/modernizr-custom.js"></script> -->
-      
-      
-    <!--   <script src="js/vendor/Chart/Chart.js"></script>  -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-     <!--  <script src="js/vendor/angular-chart/dist/angular-chart.js"></script> -->
 
-      <script src="js/vendor/jk-Carousel.min.js"></script> 
 
-   <script src="js/app/landing/landing-index.js"></script> 
-   <script src="js/app/landing/controller/landingCtrl.js"></script>
-   
-   <script src="js/app/products/products-index.js"></script> 
-   <script src="js/app/products/controller/productsCtrl.js"></script>
+<!--   <script src="js/vendor/Chart/Chart.js"></script>  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<!--  <script src="js/vendor/angular-chart/dist/angular-chart.js"></script> -->
 
-	<script src="js/app/customers/customers-index.js"></script> 
-   <script src="js/app/customers/controller/customersCtrl.js"></script>
-   
-   	<script src="js/app/careers/careers-index.js"></script> 
-   <script src="js/app/careers/controller/careersCtrl.js"></script>
-   
-   <script src="js/app/sonicpad/sonic-index.js"></script> 
-   <script src="js/app/sonicpad/controller/sonicpadCtrl.js"></script>
-   
-   <script src="js/app/contact/contact-index.js"></script> 
-   <script src="js/app/contact/controller/contactCtrl.js"></script>
-   
-   <script src="js/app/app.js"></script>
+<script src="js/vendor/jk-Carousel.min.js"></script>
+
+<script src="js/app/landing/landing-index.js"></script>
+<script src="js/app/landing/controller/landingCtrl.js"></script>
+
+<script src="js/app/products/products-index.js"></script>
+<script src="js/app/products/controller/productsCtrl.js"></script>
+
+<script src="js/app/customers/customers-index.js"></script>
+<script src="js/app/customers/controller/customersCtrl.js"></script>
+
+<script src="js/app/careers/careers-index.js"></script>
+<script src="js/app/careers/controller/careersCtrl.js"></script>
+
+<script src="js/app/sonicpad/sonic-index.js"></script>
+<script src="js/app/sonicpad/controller/sonicpadCtrl.js"></script>
+
+<script src="js/app/contact/contact-index.js"></script>
+<script src="js/app/contact/controller/contactCtrl.js"></script>
+
+<script src="js/app/app.js"></script>
+
 </html>
