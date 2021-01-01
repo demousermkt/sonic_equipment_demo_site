@@ -34,12 +34,8 @@ window.app = angular.module('app',[
         var params = {
             screenSet: 'Default-RegistrationLogin',
             onAfterSubmit: event => {
-                if (event.screen === "gigya-register-screen"){    
+                if (event.screen === "gigya-login-screen"){    
                   profile = event.profile;
-
-                  //document.getElementById("loggedIn").style.display = "none";
-                  //document.getElementById("loggedOut").style.display = "block";
-                  //document.getElementById("profile").style.display = "block";
                 }
             }
         }
