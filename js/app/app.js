@@ -15,7 +15,8 @@ window.app = angular.module('app',[
 
 .controller('appCtrl',['$scope','$uibModal','$state',function($scope,$uibModal,$state){
     console.dir("in app ctrl");
-    $scope.profile;
+    $scope.firstName;
+    $scope.email;
     $scope.switchPersona = function(){
        /* var modalInstance = $uibModal.open({
             templateUrl : 'js/app/landing/view/switchPersonaDialog.html',
@@ -35,7 +36,8 @@ window.app = angular.module('app',[
             screenSet: 'Default-RegistrationLogin',
             onAfterSubmit: event => {
                 if (event.screen === "gigya-login-screen"){    
-                  this.profile = event.profile.email;
+                  this.firstName = event.profile.firstName;
+                  this.email = event.profile.email;
 
                   document.getElementById("loggedIn").style.display = "none";
                   document.getElementById("loggedOut").style.display = "block";
