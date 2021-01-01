@@ -36,6 +36,10 @@ window.app = angular.module('app',[
             onAfterSubmit: event => {
                 if (event.screen === "gigya-login-screen"){    
                   profile = event.profile;
+
+                  document.getElementById("loggedIn").style.display = "none";
+                  document.getElementById("loggedOut").style.display = "block";
+                  document.getElementById("profile").style.display = "block";
                 }
             }
         }
