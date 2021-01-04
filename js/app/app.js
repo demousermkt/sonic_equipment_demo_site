@@ -42,6 +42,10 @@ window.app = angular.module('app',[
                   document.getElementById("loggedIn").style.display = "none";
                   document.getElementById("loggedOut").style.display = "block";
                   document.getElementById("profile").style.display = "block";
+
+                  window.dataLayer.push({
+                    'visitorEmail': 'email' 
+                });
                 }
             }
         }
