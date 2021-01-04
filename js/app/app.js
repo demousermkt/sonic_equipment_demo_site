@@ -44,7 +44,7 @@ window.app = angular.module('app',[
                   document.getElementById("profile").style.display = "block";
 
                   window.dataLayer.push({
-                    'visitorEmail': 'email' 
+                    'visitorEmail': this.email
                 });
                 }
             }
